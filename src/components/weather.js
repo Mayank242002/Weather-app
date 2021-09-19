@@ -43,8 +43,8 @@ const Weather = () =>{
        <p className="errorMsg">NO Data Found</p>  
      ):(<div> 
     <div className="info"> 
-      {!icon?(<p></p>):(<h2 className="icon">
-         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
+      {!icon?null:(<h2 >
+         <img className="icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
        </h2>)
        }
        
