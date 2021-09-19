@@ -6,7 +6,8 @@ const handlechange =()  =>{
 }
 const Weather = () =>{
       const [city,setCity]=useState(null);
-      const [search,setSearch]=useState("Dehradun")
+      const [search,setSearch]=useState("Dehradun");
+      const [icon,setIcon]=useState(null);
 
       useEffect (()=>{
 
@@ -17,6 +18,8 @@ const Weather = () =>{
             const response=await fetch(url);
             const jsonData=await response.json();
             setCity(jsonData.main);
+            setIcon(jsonData.weather[0].icon);
+            
           }catch(error){
             console.log(error);
           }
@@ -26,6 +29,7 @@ const Weather = () =>{
         
       },[search]);
 
+     
       const handlechange=(event)=>{
         setSearch(event.target.value);
       }
@@ -39,6 +43,11 @@ const Weather = () =>{
        <p className="errorMsg">NO Data Found</p>  
      ):(<div> 
     <div className="info"> 
+      {!icon?(<p></p>):(<h2 className="icon">
+         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
+       </h2>)
+       }
+       
        <h2 className="location">
         <i className="fas fa-street-view"></i> {search}
        </h2>
