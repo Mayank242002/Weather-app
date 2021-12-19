@@ -42,7 +42,7 @@ const Weather = () =>{
      ):(<div> 
     <div className="info"> 
       {!icon?null:(<h2 >
-         <img className="icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
+         <img className="icon" alt="icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
        </h2>)
        }
        
