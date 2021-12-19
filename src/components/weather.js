@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import  "./weather-styles.css"
 
-const handlechange =()  =>{
-    console.log("hello");
-}
+
 const Weather = () =>{
       const [city,setCity]=useState(null);
       const [search,setSearch]=useState("Dehradun");
