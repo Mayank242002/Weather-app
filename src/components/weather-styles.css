@@ -184,9 +184,10 @@ html {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 540px) {
     .box {
         height: 80vh;
+        margin-left: 1rem;
     }
 
     .wave {
