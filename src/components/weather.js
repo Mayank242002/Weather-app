@@ -25,7 +25,7 @@ const Weather = () =>{
 
         fetchData();
         
-      });
+      },[search]);
 
      
       const handlechange=(event)=>{
