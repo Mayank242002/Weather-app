@@ -9,7 +9,7 @@ const Weather = () =>{
 
       useEffect (()=>{
 
-        const url=`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=c330fc44a97066547ea044f31c873fde`;
+        const url=`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=c330fc44a97066547ea044f31c873fde`;
 
         const fetchData=async()=>{
           try{
